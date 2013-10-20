@@ -121,6 +121,10 @@ public class Core {
             logger.info("Starting {} bot", botType);
             try {
                 BotClassInfo botClassInfo = BOT_INFO.get(botType);
+                if (botClassInfo == null) {
+                    logger.error("Cannot start bot '{}': the specified bot doesn't exist!", botType);
+                    continue;
+                }
                 Bot bot = botClassInfo.getBotClass().newInstance();
                 bot.info = botClassInfo;
                 bot.start();
