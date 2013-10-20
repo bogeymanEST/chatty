@@ -50,6 +50,8 @@ public class Core {
     private static final List<Bot> BOTS = new ArrayList<Bot>();
     private static final Map<String, BotClassInfo> BOT_INFO = new HashMap<String, BotClassInfo>();
     private static final Map<String, PluginInfo> PLUGIN_INFO = new HashMap<String, PluginInfo>();
+    private static final File botsDirecotry = new File("bots");
+    private static final File pluginsDirecotry = new File("plugins");
 
     /**
      * Gets the number of running bots.
@@ -70,6 +72,8 @@ public class Core {
     }
 
     public static void main(String[] args) {
+        botsDirecotry.mkdir();
+        pluginsDirecotry.mkdir();
         logger.info("Setting up");
         EventManager.addListener(new ChatListener());
         System.setOut(new PrintStream(new LoggingStream(LogManager.getLogger("STDOUT"), Level.INFO)));
@@ -87,7 +91,7 @@ public class Core {
     @SuppressWarnings("unchecked")
     private static void startPlugins() {
         logger.info("Loading available plugins");
-        final Collection<File> botJars = FileUtils.listFiles(new File("plugins"), new String[]{"jar"}, false);
+        final Collection<File> botJars = FileUtils.listFiles(pluginsDirecotry, new String[]{"jar"}, false);
         for (File botJar : botJars) {
             try {
                 JarFile jar = new JarFile(botJar);
@@ -132,7 +136,7 @@ public class Core {
     @SuppressWarnings("unchecked")
     private static void loadBots() {
         logger.info("Loading available bots");
-        final Collection<File> botJars = FileUtils.listFiles(new File("bots"), new String[]{"jar"}, false);
+        final Collection<File> botJars = FileUtils.listFiles(botsDirecotry, new String[]{"jar"}, false);
         for (File botJar : botJars) {
             try {
                 JarFile jar = new JarFile(botJar);
