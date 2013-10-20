@@ -1,0 +1,6 @@
+#A list of bots that should be used
+bots:
+  - type: skype #The type of the bot
+    name: Chatty #The name the bot should use.
+    settings: #Bots may require extra settings
+        username: USERNAME #The username this bot should look for. Skype must be running with this user logged in.

@@ -1,0 +1,11 @@
+*.iml
+/lib
+/logs
+/.idea
+/target
+/config
+/bots
+/plugins
+/*Plugin/
+/*Bot/
+/data
