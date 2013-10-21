@@ -29,9 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: Bogeyman
- * Date: 13.10.13
- * Time: 14:36
+ * Provides methods for working with user profiles.
  */
 public class PermissionManager {
     /**

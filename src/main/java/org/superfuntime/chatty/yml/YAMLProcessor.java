@@ -64,6 +64,8 @@ import java.util.Map;
  * <p>Calling code could access sturmeh's baby eating state by using
  * {@code getBoolean("sturmeh.eats.babies", false)}. For lists, there are
  * methods such as {@code getStringList} that will return a type safe list.
+ * <p/>
+ * Code from <a href="https://github.com/Spoutcraft/LegacyLauncher">Spoutcraft Launcher</a>
  */
 @SuppressWarnings("UnusedDeclaration")
 public class YAMLProcessor extends YAMLNode {

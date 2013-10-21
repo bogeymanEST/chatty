@@ -20,9 +20,7 @@
 package org.superfuntime.chatty.utils;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 15:06
+ * Callback when JSON data is returned.
  */
 public interface JSONReplyHandler {
     /**

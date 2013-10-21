@@ -33,9 +33,7 @@ import org.superfuntime.chatty.permissions.Profile;
 import java.util.*;
 
 /**
- * User: Bogeyman
- * Date: 27.09.13
- * Time: 20:30
+ * Provides methods for working with commands.
  */
 public class CommandManager {
     public static final String COMMAND_PREFIX = "!";

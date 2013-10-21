@@ -22,9 +22,7 @@ package org.superfuntime.chatty.events;
 import org.superfuntime.chatty.chat.ChatMessage;
 
 /**
- * User: Bogeyman
- * Date: 11.10.13
- * Time: 19:05
+ * A chat event. Called when a chat message is sent or received.
  */
 public abstract class ChatEvent implements BaseEvent {
     private ChatMessage message;

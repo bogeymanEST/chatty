@@ -22,9 +22,7 @@ package org.superfuntime.chatty.utils;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
- * User: Bogeyman
- * Date: 13.10.13
- * Time: 14:58
+ * General utilities.
  */
 public class Utils {
     /**

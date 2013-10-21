@@ -22,9 +22,9 @@ package org.superfuntime.chatty.arguments;
 import java.util.Scanner;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 13:53
+ * A string value. Reads until the next whitespace (space, new line, etc).
+ * <p/>
+ * To get everything to the end of the line, see {@link AllArgument}.
  */
 public class StringArgument implements ArgumentParser<String> {
     @Override

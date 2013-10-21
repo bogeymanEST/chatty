@@ -30,9 +30,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 15:05
+ * A helper class to get JSON data from a URL.
  */
 public class JSONGetter {
     private static Logger logger = LogManager.getLogger();

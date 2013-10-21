@@ -49,6 +49,13 @@ public class ListArgumentParser implements ArgumentParser<String> {
         return usage.toString();
     }
 
+    /**
+     * Adds a valid value.
+     *
+     * @param value The value to add. Case-insensitive
+     *
+     * @return this
+     */
     public ListArgumentParser add(String value) {
         values.add(value.toLowerCase());
         return this;

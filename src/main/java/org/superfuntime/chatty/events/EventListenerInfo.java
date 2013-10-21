@@ -23,9 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: Bogeyman
- * Date: 11.10.13
- * Time: 19:11
+ * Information about an event listener object.
  */
 public class EventListenerInfo {
     private Object object;

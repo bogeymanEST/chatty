@@ -20,9 +20,7 @@
 package org.superfuntime.chatty.permissions;
 
 /**
- * User: Bogeyman
- * Date: 13.10.13
- * Time: 14:37
+ * Permission group.
  */
 public enum Group {
     ADMIN(100),

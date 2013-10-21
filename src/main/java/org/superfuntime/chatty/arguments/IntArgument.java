@@ -22,9 +22,7 @@ package org.superfuntime.chatty.arguments;
 import java.util.Scanner;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 13:53
+ * An integer value.
  */
 public class IntArgument implements ArgumentParser<Integer> {
     @Override

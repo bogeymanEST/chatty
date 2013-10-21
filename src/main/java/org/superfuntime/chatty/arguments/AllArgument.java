@@ -22,9 +22,7 @@ package org.superfuntime.chatty.arguments;
 import java.util.Scanner;
 
 /**
- * User: Bogeyman
- * Date: 13.10.13
- * Time: 15:17
+ * Matches everything to the end of the line.
  */
 public class AllArgument extends StringArgument {
     @Override

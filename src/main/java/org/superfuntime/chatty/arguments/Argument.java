@@ -20,9 +20,7 @@
 package org.superfuntime.chatty.arguments;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 13:40
+ * A single command argument.
  */
 public class Argument {
     private final String name;
@@ -73,7 +71,7 @@ public class Argument {
     }
 
     /**
-     * Gets the parser of this command
+     * Gets the parser of this command. Parsers validate the argument and get its value.
      *
      * @return The parser
      */

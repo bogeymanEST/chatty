@@ -27,6 +27,8 @@ import java.util.Map;
 
 /**
  * Represents a configuration node.
+ * <p/>
+ * Code from <a href="https://github.com/Spoutcraft/LegacyLauncher">Spoutcraft Launcher</a>
  */
 public class YAMLNode {
     protected Map<String, Object> root;

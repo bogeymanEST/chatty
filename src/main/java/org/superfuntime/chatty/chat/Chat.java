@@ -20,9 +20,9 @@
 package org.superfuntime.chatty.chat;
 
 /**
- * User: Bogeyman
- * Date: 2.10.13
- * Time: 19:02
+ * Represents a single chat room. Could be a group chat or a one-on-one private message chat.
+ * <p/>
+ * Every bot implementation should extend this class to provide functionality.
  */
 public abstract class Chat {
 

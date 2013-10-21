@@ -22,9 +22,7 @@ package org.superfuntime.chatty;
 import org.superfuntime.chatty.settings.SettingsManager;
 
 /**
- * User: Bogeyman
- * Date: 5.10.13
- * Time: 12:21
+ * Provides useful methods.
  */
 public class ChatBot {
     private static final SettingsManager SETTINGS = new SettingsManager();

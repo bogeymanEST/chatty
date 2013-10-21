@@ -22,9 +22,9 @@ package org.superfuntime.chatty.arguments;
 import java.util.Scanner;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 13:51
+ * An argument parser.
+ * <p/>
+ * A parser reads the given input and gets the value of the argument from it.
  */
 public interface ArgumentParser<T> {
     /**

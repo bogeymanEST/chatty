@@ -28,9 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: Bogeyman
- * Date: 11.10.13
- * Time: 19:03
+ * Provides methods for registering event listeners and calling events.
  */
 public class EventManager {
     private static Logger logger = LogManager.getLogger("EventMgr");

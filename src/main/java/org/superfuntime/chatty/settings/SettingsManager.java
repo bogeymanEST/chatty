@@ -28,9 +28,7 @@ import org.superfuntime.chatty.yml.YAMLProcessor;
 import java.io.*;
 
 /**
- * User: Bogeyman
- * Date: 1.10.13
- * Time: 18:05
+ * Provides access to settings.
  */
 public class SettingsManager {
     /**

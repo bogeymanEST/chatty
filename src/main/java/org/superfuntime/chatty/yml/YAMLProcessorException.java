@@ -22,6 +22,8 @@ package org.superfuntime.chatty.yml;
 
 /**
  * YAMLProcessor exception.
+ * <p/>
+ * Code from <a href="https://github.com/Spoutcraft/LegacyLauncher">Spoutcraft Launcher</a>
  */
 public class YAMLProcessorException extends Exception {
     private static final long serialVersionUID = -2442886939908724203L;

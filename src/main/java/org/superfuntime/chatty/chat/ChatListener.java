@@ -31,9 +31,7 @@ import org.superfuntime.chatty.events.Listener;
 import java.util.Calendar;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 13:34
+ * Listens for chat events and executes commands.
  */
 public class ChatListener {
 

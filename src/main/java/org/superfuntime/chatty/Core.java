@@ -40,7 +40,7 @@ import java.util.*;
 import java.util.jar.JarFile;
 
 /**
- * Hello world!
+ * The class where eveyrthing starts from.
  */
 public class Core {
     /**

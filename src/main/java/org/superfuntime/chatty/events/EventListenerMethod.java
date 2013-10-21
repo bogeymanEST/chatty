@@ -22,9 +22,7 @@ package org.superfuntime.chatty.events;
 import java.lang.reflect.Method;
 
 /**
- * User: Bogeyman
- * Date: 11.10.13
- * Time: 19:16
+ * Information about an event listener method.
  */
 public class EventListenerMethod {
     private Method method;

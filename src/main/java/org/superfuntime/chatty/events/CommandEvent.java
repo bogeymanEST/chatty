@@ -26,9 +26,7 @@ import org.superfuntime.chatty.commands.CommandInfo;
 import java.util.List;
 
 /**
- * User: Bogeyman
- * Date: 27.09.13
- * Time: 20:29
+ * Called when a command is executed.
  */
 public class CommandEvent implements BaseEvent {
     private final List<ArgumentValue> arguments;

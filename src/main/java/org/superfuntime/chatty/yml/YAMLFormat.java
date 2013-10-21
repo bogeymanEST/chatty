@@ -22,6 +22,9 @@ package org.superfuntime.chatty.yml;
 
 import org.yaml.snakeyaml.DumperOptions.FlowStyle;
 
+/**
+ * Code from <a href="https://github.com/Spoutcraft/LegacyLauncher">Spoutcraft Launcher</a>
+ */
 public enum YAMLFormat {
     EXTENDED(FlowStyle.BLOCK),
     COMPACT(FlowStyle.AUTO);

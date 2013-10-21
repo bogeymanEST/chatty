@@ -20,9 +20,7 @@
 package org.superfuntime.chatty.arguments;
 
 /**
- * User: Bogeyman
- * Date: 28.09.13
- * Time: 14:07
+ * An argument-value pair.
  */
 public class ArgumentValue {
     private final Argument argument;
