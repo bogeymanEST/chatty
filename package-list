@@ -1,0 +1,9 @@
+org.superfuntime.chatty
+org.superfuntime.chatty.arguments
+org.superfuntime.chatty.chat
+org.superfuntime.chatty.commands
+org.superfuntime.chatty.events
+org.superfuntime.chatty.permissions
+org.superfuntime.chatty.settings
+org.superfuntime.chatty.utils
+org.superfuntime.chatty.yml
