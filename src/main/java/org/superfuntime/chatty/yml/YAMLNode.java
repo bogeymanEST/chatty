@@ -104,8 +104,8 @@ public class YAMLNode {
      * Set the property at a location. This will override existing
      * configuration data to have it conform to key/value mappings.
      *
-     * @param path
-     * @param value
+     * @param path  The path to set at
+     * @param value The value to set to
      */
     @SuppressWarnings("unchecked")
     public void setProperty(String path, Object value) {
@@ -141,9 +141,9 @@ public class YAMLNode {
      * to the new node. This method will replace an existing node at
      * the same path. See <code>setProperty</code>.
      *
-     * @param path
+     * @param path The path to create the node at
      *
-     * @return
+     * @return The newly created node
      */
     public YAMLNode addNode(String path) {
         Map<String, Object> map = new LinkedHashMap<String, Object>();
@@ -500,7 +500,7 @@ public class YAMLNode {
      * path does not lead to a node, null will be returned. A node has
      * key/value mappings.
      *
-     * @param path
+     * @param path The path to get the node from
      *
      * @return node or null
      */
@@ -547,9 +547,9 @@ public class YAMLNode {
     /**
      * Casts a value to an integer. May return null.
      *
-     * @param o
+     * @param o The object
      *
-     * @return
+     * @return The object as an integer, or {@code null} on failure
      */
     private static Integer castInt(Object o) {
         if (o == null) {
@@ -564,9 +564,9 @@ public class YAMLNode {
     /**
      * Casts a value to a double. May return null.
      *
-     * @param o
+     * @param o The object
      *
-     * @return
+     * @return The object as a double, or {@code null} on failure
      */
     private static Double castDouble(Object o) {
         if (o == null) {
@@ -581,9 +581,9 @@ public class YAMLNode {
     /**
      * Casts a value to a boolean. May return null.
      *
-     * @param o
+     * @param o The object
      *
-     * @return
+     * @return The object as a boolean, or {@code null} on failure
      */
     private static Boolean castBoolean(Object o) {
         if (o == null) {
@@ -599,7 +599,7 @@ public class YAMLNode {
      * Remove the property at a location. This will override existing
      * configuration data to have it conform to key/value mappings.
      *
-     * @param path
+     * @param path The path to remove at
      */
     @SuppressWarnings("unchecked")
     public void removeProperty(String path) {

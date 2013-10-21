@@ -74,7 +74,7 @@ public class CommandInfo {
      * @param name        The name of the argument
      * @param description The description of the argument
      * @param type        The type of the argument
-     * @param required    {@code true} if the argument is required, {@link false} otherwise.
+     * @param required    {@code true} if the argument is required, {@code false} otherwise.
      *
      * @return this
      */
