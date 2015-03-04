@@ -1,6 +1,6 @@
 <!--
   ~ An easily extendable chat bot for any chat service.
-  ~ Copyright (C) 2013 bogeymanEST
+  ~ Copyright (C) 2015 bogeymanEST
   ~
   ~ This program is free software; you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -24,7 +24,10 @@
     <groupId>org.superfuntime.chatty</groupId>
     <artifactId>chatty</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>../Chatty-twitch</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>chatty</name>
     <url>http://maven.apache.org</url>
