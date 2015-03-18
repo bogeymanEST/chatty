@@ -22,14 +22,19 @@ package org.superfuntime.chatty.arguments;
 import java.util.Scanner;
 
 /**
- * A string value. Reads until the next whitespace (space, new line, etc).
+ * A string value. Reads until the next whitespace (space, new line, etc) unless it is surrounded by double-quotes.
  * <p/>
  * To get everything to the end of the line, see {@link AllArgument}.
  */
 public class StringArgument implements ArgumentParser<String> {
     @Override
     public String parse(Scanner scanner) {
-        return scanner.next();
+        String str = scanner.next();
+        if (str.startsWith("\"") && !str.endsWith("\"")) {
+            str += scanner.findInLine("[^\"]*\"");
+            str = str.replace("\"", "");
+        }
+        return str;
     }
 
     @Override
