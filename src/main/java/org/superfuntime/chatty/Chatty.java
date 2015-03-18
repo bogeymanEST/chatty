@@ -38,14 +38,12 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.*;
 import java.util.jar.JarFile;
+import java.util.zip.ZipEntry;
 
 /**
  * The class where eveyrthing starts from.
  */
-public class Core {
-    /**
-     * The ID of the Skype user
-     */
+public class Chatty {
     private static final Logger logger = LogManager.getLogger();
     private static final List<Bot> BOTS = new ArrayList<Bot>();
     private static final Map<String, BotClassInfo> BOT_INFO = new HashMap<String, BotClassInfo>();
@@ -95,12 +93,15 @@ public class Core {
         for (File botJar : botJars) {
             try {
                 JarFile jar = new JarFile(botJar);
-                InputStream is = jar.getInputStream(jar.getEntry("plugin.yml"));
+                ZipEntry ze = jar.getEntry("plugin.yml");
+                if (ze == null)
+                    throw new RuntimeException("Plugin has no plugin.yml file!");
+                InputStream is = jar.getInputStream(ze);
                 YAMLNode n = new YAMLNode(new Yaml().loadAs(is, Map.class), true);
                 String mainClass = n.getString("mainClass");
                 String name = n.getString("name");
                 URLClassLoader loader = new URLClassLoader(new URL[]{botJar.toURI().toURL()},
-                                                           Core.class.getClassLoader());
+                        Chatty.class.getClassLoader());
                 Plugin plugin = loader.loadClass(mainClass).asSubclass(Plugin.class).newInstance();
                 plugin.start();
                 PLUGIN_INFO.put(name, new PluginInfo(name, plugin, n));
@@ -144,12 +145,15 @@ public class Core {
         for (File botJar : botJars) {
             try {
                 JarFile jar = new JarFile(botJar);
-                InputStream is = jar.getInputStream(jar.getEntry("bot.yml"));
+                ZipEntry entry = jar.getEntry("bot.yml");
+                if (entry == null)
+                    throw new RuntimeException("Bot has no bot.yml file!");
+                InputStream is = jar.getInputStream(entry);
                 YAMLNode n = new YAMLNode(new Yaml().loadAs(is, Map.class), true);
                 String mainClass = n.getString("mainClass");
                 String type = n.getString("type");
                 URLClassLoader loader = new URLClassLoader(new URL[]{botJar.toURI().toURL()},
-                                                           Core.class.getClassLoader());
+                        Chatty.class.getClassLoader());
                 BOT_INFO.put(type, new BotClassInfo(loader.loadClass(mainClass).asSubclass(Bot.class), n));
                 logger.info("Loaded bot '{}'", type);
             } catch (Exception e) {
