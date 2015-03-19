@@ -39,4 +39,12 @@ public abstract class ChatEvent implements BaseEvent {
     public ChatMessage getMessage() {
         return message;
     }
+
+    /**
+     * Convenience method to send a message back to the chat this message was received from.
+     * @param lines The chat lines to send
+     */
+    public void respond(String... lines) {
+        message.getChat().send(lines);
+    }
 }

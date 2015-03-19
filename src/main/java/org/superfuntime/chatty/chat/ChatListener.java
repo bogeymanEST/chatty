@@ -23,8 +23,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.Seconds;
-import org.superfuntime.chatty.commands.CommandManager;
 import org.superfuntime.chatty.events.ChatReceivedEvent;
+import org.superfuntime.chatty.commands.CommandManager;
 import org.superfuntime.chatty.events.ChatSentEvent;
 import org.superfuntime.chatty.events.Listener;
 

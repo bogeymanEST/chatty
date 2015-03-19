@@ -21,12 +21,12 @@ package org.superfuntime.chatty.commands;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.superfuntime.chatty.arguments.Argument;
 import org.superfuntime.chatty.arguments.ArgumentValue;
 import org.superfuntime.chatty.chat.Chat;
-import org.superfuntime.chatty.chat.ChatMessage;
 import org.superfuntime.chatty.chat.User;
 import org.superfuntime.chatty.events.CommandEvent;
+import org.superfuntime.chatty.arguments.Argument;
+import org.superfuntime.chatty.chat.ChatMessage;
 import org.superfuntime.chatty.events.EventManager;
 import org.superfuntime.chatty.permissions.Profile;
 

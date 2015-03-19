@@ -28,14 +28,13 @@ import java.util.List;
 /**
  * Called when a command is executed.
  */
-public class CommandEvent implements BaseEvent {
+public class CommandEvent extends ChatEvent {
     private final List<ArgumentValue> arguments;
-    private final ChatMessage message;
     private final CommandInfo command;
 
     public CommandEvent(List<ArgumentValue> arguments, ChatMessage message, CommandInfo command) {
+        super(message);
         this.arguments = arguments;
-        this.message = message;
         this.command = command;
     }
 
@@ -49,19 +48,9 @@ public class CommandEvent implements BaseEvent {
     }
 
     /**
-     * Gets the message
-     *
-     * @return The message
-     */
-    public ChatMessage getMessage() {
-        return message;
-    }
-
-    /**
      * Returns the stored {@link ArgumentValue} for the given argument.
      *
      * @param name The name of the argument
-     *
      * @return The associated {@link ArgumentValue} or {@code null} if the argument doesn't have a value.
      */
     public ArgumentValue getArgument(String name) {
@@ -71,6 +60,11 @@ public class CommandEvent implements BaseEvent {
         return null;
     }
 
+    /**
+     * Gets the command that was executed
+     *
+     * @return The command that was executed
+     */
     public CommandInfo getCommand() {
         return command;
     }

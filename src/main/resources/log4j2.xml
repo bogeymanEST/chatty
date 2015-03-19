@@ -32,7 +32,9 @@
             <DefaultRolloverStrategy max="50" />
         </RollingFile>
     </Appenders>
+
     <Loggers>
+        <logger name="org.pircbotx.*" level="ERROR" />
         <Root level="debug">
             <AppenderRef ref="Console" />
             <AppenderRef ref="RollingFile" />

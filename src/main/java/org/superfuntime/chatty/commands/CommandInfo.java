@@ -19,10 +19,10 @@
 
 package org.superfuntime.chatty.commands;
 
-import org.superfuntime.chatty.arguments.Argument;
-import org.superfuntime.chatty.arguments.ArgumentParser;
 import org.superfuntime.chatty.chat.Chat;
 import org.superfuntime.chatty.permissions.Group;
+import org.superfuntime.chatty.arguments.Argument;
+import org.superfuntime.chatty.arguments.ArgumentParser;
 
 import java.util.ArrayList;
 import java.util.List;
