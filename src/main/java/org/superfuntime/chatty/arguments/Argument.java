@@ -90,6 +90,10 @@ public class Argument {
          */
         INT(new IntArgument()),
         /**
+         * A list of strings
+         */
+        STRING_LIST(new StringListArgument()),
+        /**
          * Everything to the end of the line is included.
          */
         ALL(new AllArgument());
